@@ -1,0 +1,17 @@
+﻿<Window x:Class="DaveSquared.GardenRace.Gui.GardenRaceView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="GardenRaceView" Height="526" Width="716">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="528*" />
+            <ColumnDefinition Width="166*" />
+        </Grid.ColumnDefinitions>
+        <UniformGrid Name="gameBoard" Rows="8" Columns="8" />
+        <Label Grid.Column="1" Height="28" Margin="0,12,46,0" Name="currentPlayer" VerticalAlignment="Top">currentPlayer</Label>
+        <Button Grid.Column="1" Height="23" Margin="46,46,46,0" Name="rollDieButton" VerticalAlignment="Top" Click="rollDieButton_Click">Roll</Button>
+        <Label Grid.Column="1" Height="28" Margin="0,86,46,0" Name="rollResult" VerticalAlignment="Top">rollResult</Label>
+        <Ellipse Visibility="Hidden" Name="player1Marker" Stroke="Black" Height="30" Margin="5, 0, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Fill="Red" Width="30" />
+        <Ellipse Visibility="Hidden" Height="30" HorizontalAlignment="Left" Name="player2Marker" Stroke="Black" Fill="Blue" VerticalAlignment="Top" Width="30" />
+    </Grid>
+</Window>

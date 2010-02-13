@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Test</title>
+    <script language="JavaScript" src="YaJsUnit.Framework.js"></script>
+    <script language="JavaScript" src="TestRunnerSpec.js"></script>
+    <script language="JavaScript" src="FixtureRunnerSpec.js"></script>
+    <script language="JavaScript" src="AssertionSpec.js"></script>
+  <body>
+    <div id="results" />
+    <script language="javascript">    
+    var output = new ElementOutputStream(document.getElementById("results"));
+    var resultsWriter = new ResultsWriter(output);    
+    var runner = new TestRunner();
+    
+    runner
+      .addFixture(TestRunnerSpec)
+      .addFixture(FixtureRunnerSpec)
+      .addFixture(AssertionSpec)
+      .addFixture(TrueConstraintSpec)
+      .addFixture(FalseConstraintSpec)
+      .addFixture(InCollectionConstraintSpec)
+      .addFixture(EqualToConstraintSpec)
+      .run();
+    
+    resultsWriter.writeResults(runner);
+    
+    </script>     
+  </body>
+</html>
