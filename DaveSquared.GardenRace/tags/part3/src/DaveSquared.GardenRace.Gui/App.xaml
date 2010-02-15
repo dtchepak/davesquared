@@ -1,8 +1,0 @@
-﻿<Application x:Class="DaveSquared.GardenRace.Gui.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    StartupUri="GardenRaceView.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>
