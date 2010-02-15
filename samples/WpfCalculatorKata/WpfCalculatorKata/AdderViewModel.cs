@@ -1,12 +1,11 @@
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace WpfCalculatorKata
 {
     public class AdderViewModel : INotifyPropertyChanged
     {
         private readonly Adder _adder;
-        private int _firstNumber;
-        private int _secondNumber;
         private int _result;
 
         public AdderViewModel(Adder adder)
@@ -14,22 +13,9 @@ namespace WpfCalculatorKata
             _adder = adder;
         }
 
-        public int FirstNumber
-        {
-            get { return _firstNumber; }
-            set { _firstNumber = value; NumberChanged(); }
-        }
+        public int FirstNumber { get; set; }
 
-        public int SecondNumber
-        {
-            get { return _secondNumber; }
-            set { _secondNumber = value; NumberChanged(); }
-        }
-
-        private void NumberChanged()
-        {
-            Result = _adder.Add(_firstNumber, _secondNumber);
-        }
+        public int SecondNumber { get; set; }
 
         public int Result
         {
@@ -44,6 +30,16 @@ namespace WpfCalculatorKata
             var handler = PropertyChanged;
             if (handler == null) return;
             handler(this, new PropertyChangedEventArgs("Result"));
+        }
+
+        public void AddNumbers()
+        {
+            Result = _adder.Add(FirstNumber, SecondNumber);
+        }
+
+        public ICommand AddNumbersCommand
+        {
+            get { return new DelegateCommand(AddNumbers); }
         }
     }
 }

@@ -13,6 +13,7 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
@@ -20,9 +21,10 @@
         </Grid.ColumnDefinitions>
         <Label Content="First Number" Grid.Row="0" />
         <Label Content="Second Number" Grid.Row="1" />
-        <Label Content="Result" Grid.Row="2" />
+        <Label Content="Result" Grid.Row="3" />
         <TextBox Name="firstNumber" Text="{Binding FirstNumber}" Grid.Row="0" Grid.Column="1" />
         <TextBox Name="secondNumber" Text="{Binding SecondNumber}" Grid.Row="1" Grid.Column="1" />
-        <Label Name="result" Content="{Binding Result}" Grid.Row="2" Grid.Column="1"/>
+        <Button Name="addButton" Content="Add" Command="{Binding AddNumbersCommand}"  Grid.Row="2" Grid.Column="1" />
+        <Label Name="result" Content="{Binding Result}" Grid.Row="3" Grid.Column="1"/>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ namespace WpfCalculatorKata.Tests
     public class AdderViewModelTests
     {
         [TestFixture]
-        public class When_both_numbers_are_provided
+        public class When_adding_numbers
         {
             private Adder _adder;
             private AdderViewModel _adderViewModel;
@@ -27,6 +27,7 @@ namespace WpfCalculatorKata.Tests
 
                 _adderViewModel.FirstNumber = firstNumber;
                 _adderViewModel.SecondNumber = secondNumber;
+                _adderViewModel.AddNumbers();                
             }
 
             private void RecordPropertyChangeOnViewModel()

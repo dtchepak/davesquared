@@ -62,6 +62,7 @@
     <Compile Include="Adder.cs" />
     <Compile Include="AdderViewModel.cs" />
     <Compile Include="ConreteAdder.cs" />
+    <Compile Include="DelegateCommand.cs" />
     <Compile Include="Tests\AdderViewModelTests.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
