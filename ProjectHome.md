@@ -1,0 +1,1 @@
+Code samples from [dave^2 blog posts](http://davesquared.net), and various mini projects.
